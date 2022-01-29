@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Background from './Background';
 import Pulse from './pulse';
-import Message from './Message';
+import Breathe from './Breathe';
 import BasicList from './Checklist';
 
 function TabPanel(props) {
@@ -55,18 +55,36 @@ export default function BasicTabs() {
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
           <Tab label="Home" {...a11yProps(0)} sx={{color: 'white' }}/>
           <Tab label="History" {...a11yProps(1)} sx={{color: 'white' }}/>
+          <Tab label="Message" {...a11yProps(2)} sx={{color: 'white' }}/>
+          <Tab label="Breathe" {...a11yProps(3)} sx={{color: 'white' }}/>
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
         <Background/>
         <h1>Today's Objectives</h1>
+        <div class="center">
+          <div class="message">
+            <h1>Okay you've had enough screen time!<br></br>
+              Go outside, get some fresh air and come back when you're ready :)</h1>
+          </div>
+        </div>
         <BasicList />
-        {/* <Pulse/> */}
-        {/* <Message/> */}
         
       </TabPanel>
       <TabPanel value={value} index={1} class="stars">
         
+      </TabPanel>
+      <TabPanel value={value} index={2} class="stars">
+      <div class="center">
+          <div class="message">
+            <h1>Okay you've had enough screen time!<br></br>
+              Go outside, get some fresh air and come back when you're ready :)</h1>
+          </div>
+        </div>
+      </TabPanel>
+      <TabPanel value={value} index={3} class="stars">
+      <Breathe/>
+      <Pulse/>
       </TabPanel>
     </Box>
   );

@@ -1,7 +1,7 @@
 function pulse() {
     return (
-        <div class="center">
-            <div class="circle pulse"></div>
+        <div className="center">
+            <div className="circle pulse"></div>
         </div>
     );
   }

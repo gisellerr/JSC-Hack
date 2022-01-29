@@ -11,6 +11,7 @@ import Button from '@mui/material/Button';
 // import Backdrop from './Backdrop'
 import BreatheModal from './BreatheModal';
 import JournalModal from './JournalModal';
+import WaterBottle from './WaterBottle';
 
 function ControlledCheckbox() {
   const [checked, setChecked] = React.useState(true);
@@ -77,6 +78,17 @@ export default function BasicList(props) {
                   <ControlledCheckbox/>
                 </ListItemIcon>
                 <ListItemText primary="Drink Water" />
+              </ListItemButton>
+            </ListItem>
+
+
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <ControlledCheckbox/>
+                </ListItemIcon>
+                <WaterBottle/>
+
               </ListItemButton>
             </ListItem>
           </List>

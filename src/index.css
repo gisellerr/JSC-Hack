@@ -243,3 +243,17 @@ ul { list-style-type:none; }
   99% {font-size:50px;opacity:1; content: "Exhale"}
   100% {font-size:50px;opacity:1; content: "Inhale"}
 }
+
+#finalMessage{
+    display: none;
+    z-index: 10;
+    background-color: black;
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #000;
+    border-radius: 50px;
+}

@@ -12,13 +12,33 @@ import Button from '@mui/material/Button';
 import BreatheModal from './BreatheModal';
 import JournalModal from './JournalModal';
 import WaterBottle from './WaterBottle';
+var totalChecked=0;
+var allDone=false;
 
 function ControlledCheckbox() {
-  const [checked, setChecked] = React.useState(true);
+  const [checked, setChecked] = React.useState();
+
 
   const handleChange = (event) => {
     setChecked(event.target.checked);
+
+    if(typeof checked=="undefined" || checked==false){ //this means that it is checked
+      totalChecked=totalChecked+1;
+    }else{
+      totalChecked=totalChecked-1;
+    }
+
+    if(totalChecked==4){
+      allDone=true;
+    }
+    if(allDone){
+      document.getElementById("finalMessage").style.display="block";
+    }
+
   };
+
+
+
 
   return (
     <Checkbox
@@ -39,54 +59,63 @@ export default function BasicList(props) {
     // function Breathe() {
     //     setModalOpen(true);
     // }
-    
-    return (
+      return (
         
-      <Box className="center" sx={{ width: '100%', maxWidth: 360 }}>
-        <nav aria-label="main mailbox folders">
-          <List>
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
+        <Box className="center" sx={{ width: '100%', maxWidth: 360 }}>
+          <nav aria-label="main mailbox folders">
+            <List>
+              <ListItem disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                      <ControlledCheckbox/>
+                  </ListItemIcon>
+                  <ListItemText primary="Breathe" />
+                  <BreatheModal/>
+                </ListItemButton>
+              </ListItem>
+              <ListItem disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
                     <ControlledCheckbox/>
-                </ListItemIcon>
-                <ListItemText primary="Breathe" />
-                <BreatheModal/>
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <ControlledCheckbox/>
-                </ListItemIcon>
-                <ListItemText primary="Daily Stretch" />
-                
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <ControlledCheckbox/>
-                </ListItemIcon>
-                <ListItemText primary="Journal Entry" />
-                <JournalModal/>
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <ControlledCheckbox/>
-                </ListItemIcon>
-                <ListItemText primary="Drink Water" />
-                <div><WaterBottle/></div>
-                <div><WaterBottle/></div>
-                <div><WaterBottle/></div>
-                <div><WaterBottle/></div>
-              </ListItemButton>
-            </ListItem>
-          </List>
-        </nav>
-        
-      </Box>
-    );
+                  </ListItemIcon>
+                  <ListItemText primary="Daily Stretch" />
+                  
+                </ListItemButton>
+              </ListItem>
+              <ListItem disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    <ControlledCheckbox/>
+                  </ListItemIcon>
+                  <ListItemText primary="Journal Entry" />
+                  <JournalModal/>
+                </ListItemButton>
+              </ListItem>
+              
+              <ListItem disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    <ControlledCheckbox/>
+                  </ListItemIcon>
+                  <ListItemText primary="Drink Water" />
+                  <div><WaterBottle/></div>
+                  <div><WaterBottle/></div>
+                  <div><WaterBottle/></div>
+                  <div><WaterBottle/></div>
+                </ListItemButton>
+              </ListItem>
+            </List>
+            <div id="finalMessage" >
+
+              <div class="center">
+                <div class="message">
+                  <h1>Okay you've had enough screen time!<br></br>
+                    Go outside, get some fresh air and come back when you're ready :)</h1>
+                </div>
+              </div>
+            </div>
+          </nav>
+          
+        </Box>
+      );
   }

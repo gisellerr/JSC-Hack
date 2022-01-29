@@ -98,11 +98,9 @@ h1{
     position:absolute;
     justify-content: space-evenly;
     align-items: center;
-    z-index: 2;
     transform: translate(-50%,-50%);
     top: 50%;
     left: 50%;
-    background-color: rgba(255,255,255,0.39);
   }
   
   .circle {
@@ -128,6 +126,7 @@ h1{
         box-shadow: 0 0 0 0px rgba(0, 204, 255, 0.863);
       }
   }
+
 .tab {
   color: white;
   
@@ -215,3 +214,32 @@ ul { list-style-type:none; }
     margin:15px;
 
   }
+.taskButton {
+  background-color: white;
+}
+.message {
+  color: white;
+}
+
+.breathe:before{
+  content: 'Inhale';
+  font-size: 400%;
+  animation-name: breathe-animation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  top: 10%;
+  position: absolute;
+  color: black;
+}
+
+@keyframes breathe-animation {
+  0% {font-size:50px; opacity:1;}
+  /* 49% {font-size:500%; opacity:0;} */
+  49% {font-size:75px; opacity:1; content: "Inhale"}
+  50% {font-size:75px; opacity:1; content: "Exhale"}
+  /* 99% {font-size:400%; opacity:0;} */
+  99% {font-size:50px;opacity:1; content: "Exhale"}
+  100% {font-size:50px;opacity:1; content: "Inhale"}
+}

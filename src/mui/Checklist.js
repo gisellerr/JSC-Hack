@@ -6,7 +6,10 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import WaterBottle from './WaterBottle';
+import Button from '@mui/material/Button';
+// import Modal from './Modal'
+// import Backdrop from './Backdrop'
+import BreatheModal from './Modal'
 
 function ControlledCheckbox() {
   const [checked, setChecked] = React.useState(true);
@@ -24,7 +27,12 @@ function ControlledCheckbox() {
   );
 }
 
-export default function BasicList() {
+export default function BasicList(props) {
+    // const [modalOpen, setModalOpen ] = React.useState(false);
+    // function Breathe() {
+    //     setModalOpen(true);
+    // }
+    
     return (
         
       <Box className="center" sx={{ width: '100%', maxWidth: 360 }}>
@@ -35,7 +43,11 @@ export default function BasicList() {
                 <ListItemIcon>
                     <ControlledCheckbox/>
                 </ListItemIcon>
-                <ListItemText primary="Meditate" />
+                <ListItemText primary="Breathe" />
+                <BreatheModal/>
+                {/* <Button variant="outlined" size="small" sx={{color: 'white', borderColor:'white' }} >Let's Do It!</Button> */}
+                {/* { modalOpen && <Modal /> }
+                { modalOpen && <Backdrop /> } */}
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
@@ -44,6 +56,7 @@ export default function BasicList() {
                   <ControlledCheckbox/>
                 </ListItemIcon>
                 <ListItemText primary="Daily Stretch" />
+                <Button variant="outlined" size="small" sx={{color: 'white', borderColor:'white' }}>Let's Do It!</Button>
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
@@ -51,7 +64,8 @@ export default function BasicList() {
                 <ListItemIcon>
                   <ControlledCheckbox/>
                 </ListItemIcon>
-                <ListItemText primary="Today's Journal Entry" />
+                <ListItemText primary="Journal Entry" />
+                <Button variant="outlined" size="small" sx={{color: 'white', borderColor:'white' }}>Let's Do It!</Button>
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
@@ -59,7 +73,7 @@ export default function BasicList() {
                 <ListItemIcon>
                   <ControlledCheckbox/>
                 </ListItemIcon>
-                <ListItemText primary="Drafts" />
+                <ListItemText primary="Drink Water" />
               </ListItemButton>
             </ListItem>
 

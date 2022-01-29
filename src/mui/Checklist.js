@@ -12,6 +12,7 @@ import Button from '@mui/material/Button';
 import BreatheModal from './BreatheModal';
 import JournalModal from './JournalModal';
 import WaterBottle from './WaterBottle';
+import ConfettiExplosion from 'react-confetti-explosion';
 var totalChecked=0;
 var allDone=false;
 
@@ -59,6 +60,7 @@ export default function BasicList(props) {
     // function Breathe() {
     //     setModalOpen(true);
     // }
+    
       return (
         
         <Box className="center" sx={{ width: '100%', maxWidth: 360 }}>
@@ -108,8 +110,10 @@ export default function BasicList(props) {
             <div id="finalMessage" >
               <div class="center">
                 <div class="message">
-                  <h1>Okay, you've had enough screen time!<br></br>
+                <ConfettiExplosion />
+                  <h1>Okay, you've had enough screen time!<br></br><ConfettiExplosion />
                     Go outside, get some fresh air and come back when you're ready :)</h1>
+                    
                 </div>
               </div>
             </div>

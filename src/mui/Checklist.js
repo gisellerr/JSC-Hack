@@ -9,7 +9,8 @@ import ListItemText from '@mui/material/ListItemText';
 import Button from '@mui/material/Button';
 // import Modal from './Modal'
 // import Backdrop from './Backdrop'
-import BreatheModal from './Modal';
+import BreatheModal from './BreatheModal';
+import JournalModal from './JournalModal';
 import WaterBottle from './WaterBottle';
 
 function ControlledCheckbox() {
@@ -23,7 +24,12 @@ function ControlledCheckbox() {
     <Checkbox
       onChange={handleChange}
       inputProps={{ 'aria-label': 'controlled' }}
-      sx={{color: 'white' }}
+      sx={{
+        color: 'white',
+        '&.Mui-checked': {
+          color: 'white',
+        },
+      }}
     />
   );
 }
@@ -46,9 +52,6 @@ export default function BasicList(props) {
                 </ListItemIcon>
                 <ListItemText primary="Breathe" />
                 <BreatheModal/>
-                {/* <Button variant="outlined" size="small" sx={{color: 'white', borderColor:'white' }} >Let's Do It!</Button> */}
-                {/* { modalOpen && <Modal /> }
-                { modalOpen && <Backdrop /> } */}
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
@@ -57,7 +60,7 @@ export default function BasicList(props) {
                   <ControlledCheckbox/>
                 </ListItemIcon>
                 <ListItemText primary="Daily Stretch" />
-                <Button variant="outlined" size="small" sx={{color: 'white', borderColor:'white' }}>Let's Do It!</Button>
+                
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
@@ -66,7 +69,7 @@ export default function BasicList(props) {
                   <ControlledCheckbox/>
                 </ListItemIcon>
                 <ListItemText primary="Journal Entry" />
-                <Button variant="outlined" size="small" sx={{color: 'white', borderColor:'white' }}>Let's Do It!</Button>
+                <JournalModal/>
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>

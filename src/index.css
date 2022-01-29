@@ -12,8 +12,8 @@ h1{
 .notepadHolder{
     position: absolute;
     color:black;
-    left:40%;
-    right: 40%;
+    left:20%;
+    right: 20%;
     z-index: 2;
 }
 

@@ -1,11 +1,10 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import { Backdrop } from '@mui/material';
 import Pulse from './pulse';
 import Breathe from './Breathe';
+import Notepad from './Notepad';
 
 const style = {
   position: 'absolute',
@@ -14,13 +13,10 @@ const style = {
   transform: 'translate(-50%, -50%)',
   width: '70%',
   height: '70%',
-  bgcolor: 'white',
-  border: '2px solid #000',
-  boxShadow: 24,
   p: 4,
 };
 
-export default function BreatheModal() {
+export default function JournalModal() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -36,8 +32,7 @@ export default function BreatheModal() {
       >
         <Box sx={style}>
             <div>
-                <Breathe/>
-                <Pulse/>
+                <Notepad/>
             </div>
         </Box>
       </Modal>

@@ -10,6 +10,11 @@ import Breathe from './Breathe';
 import BasicList from './Checklist';
 import WaterBottle from './WaterBottle'
 import wip from '../img/wip.gif'
+import Countdown from './Countdown';
+import Stretch1 from '../img/stretch1.gif';
+import Stretch2 from '../img/stretch2.gif';
+import Stretch3 from '../img/stretch3.gif';
+
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -51,6 +56,17 @@ export default function BasicTabs() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+  var stretchSource=[Stretch2, Stretch3]
+  var index=0;
+
+  setInterval(function(){
+    if(index==stretchSource.length){
+      index=0;
+    }
+    document.getElementById("stretchImage").src=stretchSource[index];
+    index++;
+  },15000);
+
 
   return (
     <Box sx={{ width: '100%' }}>
@@ -70,7 +86,14 @@ export default function BasicTabs() {
         <h1>Work In Progress</h1>
         <img src={wip} alt="Work in Progress..." className="center" />
       </TabPanel>
-      <TabPanel value={value} index={2} class="stars">
+      <TabPanel value={value} index={3}>
+      <h1>Okay lets stretch</h1>
+      <div class="center">
+        <img src={Stretch1} alt="loading" id="stretchImage"/>
+      </div>
+        <Countdown/>
+      </TabPanel>
+      <TabPanel value={value} index={10} class="stars">
       <Breathe/>
       <Pulse/>
       </TabPanel>

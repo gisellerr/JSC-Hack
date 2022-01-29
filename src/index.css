@@ -77,15 +77,15 @@ h1{
     background-size:cover;
     border:1px solid #000;
     border-radius:50%;
-    width:95%;
-    height:1200px;
+    width:96%;
+    height:140%;
     animation: movimiento 25s linear 0s infinite;
     box-shadow:0 0 5px RGBA(255,255,255, 0.10),
                -8px -8px 15px #000 inset,
                2px 2px 25px #000 inset,
                25px 25px 45px RGBA(0,0,0, 0.45) inset;
     /* margin:6em auto; */
-    transform:rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+    transform:rotateX(6deg) rotateY(0deg) rotateZ(0deg);
 }
   
 @keyframes movimiento {
@@ -219,7 +219,7 @@ ul { list-style-type:none; }
 
 .breathe:before{
   content: 'Inhale';
-  font-size: 400%;
+  font-size: 50px;
   animation-name: breathe-animation;
   animation-duration: 10s;
   animation-iteration-count: infinite;
@@ -238,6 +238,36 @@ ul { list-style-type:none; }
   /* 99% {font-size:400%; opacity:0;} */
   99% {font-size:50px;opacity:1; content: "Exhale"}
   100% {font-size:50px;opacity:1; content: "Inhale"}
+}
+
+.countdown:before{
+  content: '10';
+  font-size: 50px;
+  animation-name: countdown-animation;
+  animation-duration: 15s;
+  animation-iteration-count: 3;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  top: 80%;
+  position: absolute;
+  color: rgb(255, 0, 0);
+  z-index: 4;
+}
+
+
+
+@keyframes countdown-animation {
+  30% {font-size:50px; opacity:1; content: "10"}
+  36% {font-size:50px; opacity:1; content: "9"}
+  42% {font-size:50px;opacity:1; content: "8"}
+  48% {font-size:50px;opacity:1; content: "7"}
+  54% {font-size:50px;opacity:1; content: "6"}
+  60% {font-size:50px; opacity:1; content: "5"}
+  76% {font-size:50px; opacity:1; content: "4"}
+  82% {font-size:50px;opacity:1; content: "3"}
+  88% {font-size:50px;opacity:1; content: "2"}
+  94% {font-size:50px;opacity:1; content: "1"}
+  100% {font-size:50px; opacity:1; content: "10"}
 }
 
 #finalMessage{

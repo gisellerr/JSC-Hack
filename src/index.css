@@ -128,7 +128,12 @@ h1{
         box-shadow: 0 0 0 0px rgba(0, 204, 255, 0.863);
       }
   }
+
 .tab {
   color: white;
   
+}
+
+.taskButton {
+  background-color: white;
 }

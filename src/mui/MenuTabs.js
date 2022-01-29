@@ -69,7 +69,7 @@ export default function BasicTabs() {
       <TabPanel value={value} index={1} class="stars">
         
       </TabPanel>
-      <TabPanel value={value} index={2} >
+      <TabPanel value={value} index={2}>
       <div class="center">
           <div class="message">
             <h1>Okay you've had enough screen time!<br></br>

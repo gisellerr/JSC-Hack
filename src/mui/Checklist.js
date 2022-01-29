@@ -75,17 +75,10 @@ export default function BasicList(props) {
                   <ControlledCheckbox/>
                 </ListItemIcon>
                 <ListItemText primary="Drink Water" />
-              </ListItemButton>
-            </ListItem>
-
-
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <ControlledCheckbox/>
-                </ListItemIcon>
-                <WaterBottle/>
-
+                <div><WaterBottle/></div>
+                <div><WaterBottle/></div>
+                <div><WaterBottle/></div>
+                <div><WaterBottle/></div>
               </ListItemButton>
             </ListItem>
           </List>

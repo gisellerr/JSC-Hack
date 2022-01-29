@@ -8,6 +8,7 @@ import Background from './Background';
 import Pulse from './pulse';
 import Breathe from './Breathe';
 import BasicList from './Checklist';
+import WaterBottle from './WaterBottle'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;

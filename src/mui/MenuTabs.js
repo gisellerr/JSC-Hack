@@ -8,6 +8,7 @@ import Background from './Background';
 import Pulse from './pulse';
 import Breathe from './Breathe';
 import BasicList from './Checklist';
+import Countdown from './Countdown';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -56,6 +57,7 @@ export default function BasicTabs() {
           <Tab label="Home" {...a11yProps(0)} sx={{color: 'white' }}/>
           <Tab label="History" {...a11yProps(1)} sx={{color: 'white' }}/>
           <Tab label="Message" {...a11yProps(2)} sx={{color: 'white' }}/>
+          <Tab label="Countdown" {...a11yProps(3)} sx={{color: 'white' }}/>
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
@@ -67,11 +69,7 @@ export default function BasicTabs() {
       <TabPanel value={value} index={1}>
         
       </TabPanel>
-<<<<<<< HEAD
-      <TabPanel value={value} index={2}>
-=======
       <TabPanel value={value} index={2} >
->>>>>>> 8c392f8b48ea02a5f854f1f4ee4ddde602f6fb4c
       <div class="center">
           <div class="message">
             <h1>Okay you've had enough screen time!<br></br>
@@ -79,7 +77,11 @@ export default function BasicTabs() {
           </div>
         </div>
       </TabPanel>
-      <TabPanel value={value} index={3} class="stars">
+      <TabPanel value={value} index={3}>
+      <h1>Okay lets stretch</h1>
+        <Countdown/>
+      </TabPanel>
+      <TabPanel value={value} index={10} class="stars">
       <Breathe/>
       <Pulse/>
       </TabPanel>

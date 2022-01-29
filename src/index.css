@@ -66,9 +66,9 @@ h1{
 .fix{
     position:fixed;
     bottom:0px;
-    top:50%;
+    top:40%;
     left: 20%;
-    right:20%
+    right:20%;
 }
 
   
@@ -127,3 +127,7 @@ h1{
         box-shadow: 0 0 0 0px rgba(0, 204, 255, 0.863);
       }
   }
+.tab {
+  color: white;
+  
+}

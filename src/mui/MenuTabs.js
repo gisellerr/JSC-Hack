@@ -67,7 +67,11 @@ export default function BasicTabs() {
       <TabPanel value={value} index={1}>
         
       </TabPanel>
+<<<<<<< HEAD
       <TabPanel value={value} index={2}>
+=======
+      <TabPanel value={value} index={2} >
+>>>>>>> 8c392f8b48ea02a5f854f1f4ee4ddde602f6fb4c
       <div class="center">
           <div class="message">
             <h1>Okay you've had enough screen time!<br></br>

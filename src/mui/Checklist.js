@@ -6,7 +6,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-
+import WaterBottle from './WaterBottle';
 
 function ControlledCheckbox() {
   const [checked, setChecked] = React.useState(true);
@@ -60,6 +60,17 @@ export default function BasicList() {
                   <ControlledCheckbox/>
                 </ListItemIcon>
                 <ListItemText primary="Drafts" />
+              </ListItemButton>
+            </ListItem>
+
+
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <ControlledCheckbox/>
+                </ListItemIcon>
+                <WaterBottle/>
+
               </ListItemButton>
             </ListItem>
           </List>

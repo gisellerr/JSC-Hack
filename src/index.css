@@ -102,7 +102,7 @@ h1{
     transform: translate(-50%,-50%);
     top: 50%;
     left: 50%;
-
+    background-color: rgba(255,255,255,0.39);
   }
   
   .circle {
@@ -132,3 +132,86 @@ h1{
   color: white;
   
 }
+
+
+li.water-bottle { float:left;margin-right:-15px;}
+ul { list-style-type:none; }
+
+.bottle { 
+    z-index: 2;
+    background: #ddd; 
+    width:50px;
+    border-radius:10px 10px 6px 6px; 
+    height:80px; 
+    padding:6px;
+    box-shadow: 3px 3px 3px #efefef;
+    margin-bottom:4px;
+    margin-left: -10px;
+}
+
+#emptyBottle{
+
+}
+
+#lowBottle{
+    display: none;
+}
+
+#mediumBottle{
+    display: none;
+}
+
+#fullBottle{
+    display: none;
+}
+
+.bottle:hover { background: #eee;box-shadow: 2px  2px 2px #efefef;}
+
+#water-full { 
+    background: lightblue ;
+    width:50px;
+    margin-top:0px;
+    height:80px; 
+    z-index:1;
+    border-radius:18px 18px 5px 5px;
+
+}
+#water-medium { 
+    background: lightblue; 
+    width:50px;
+    height:60px;
+    margin-top:20px; 
+    z-index:1;
+    border-radius:28px 28px 10px 10px;
+
+}
+#water-low { 
+    background: lightblue ;
+    width:50px;
+    height:25px; 
+    margin-top:55px;
+    z-index:1;
+    border-radius:28px 28px 10px 10px;
+
+}
+#water-empty { 
+    background: lightblue ;
+    width:50px;
+    height:15px; 
+    margin-top:65px;
+    z-index:1;
+    border-radius:28px 28px 10px 10px;
+}
+
+#checkMark {
+    position: absolute;
+    transform: rotate(45deg);
+    width:12px;
+    height:24px; 
+    z-index: 4;
+    color: #78b13f;
+    border-bottom: 7px solid;
+    border-right: 7px solid;
+    margin:15px;
+
+  }

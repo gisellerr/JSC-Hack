@@ -1,4 +1,4 @@
-function Notepad() {
+function Background() {
     return (
         <div className="spaceBackground">
             <div class="stars"></div>
@@ -10,4 +10,4 @@ function Notepad() {
     );
   }
   
-  export default Notepad;
+  export default Background;

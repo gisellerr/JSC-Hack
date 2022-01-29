@@ -9,48 +9,20 @@ import ListItemText from '@mui/material/ListItemText';
 import Button from '@mui/material/Button';
 // import Modal from './Modal'
 // import Backdrop from './Backdrop'
-import BreatheModal from './BreatheModal';
-import JournalModal from './JournalModal';
-import WaterBottle from './WaterBottle';
-import ConfettiExplosion from 'react-confetti-explosion';
-var totalChecked=0;
-var allDone=false;
+import BreatheModal from './Modal'
 
 function ControlledCheckbox() {
-  const [checked, setChecked] = React.useState();
-
+  const [checked, setChecked] = React.useState(true);
 
   const handleChange = (event) => {
     setChecked(event.target.checked);
-
-    if(typeof checked=="undefined" || checked==false){ //this means that it is checked
-      totalChecked=totalChecked+1;
-    }else{
-      totalChecked=totalChecked-1;
-    }
-
-    if(totalChecked==4){
-      allDone=true;
-    }
-    if(allDone){
-      document.getElementById("finalMessage").style.display="block";
-    }
-
   };
-
-
-
 
   return (
     <Checkbox
       onChange={handleChange}
       inputProps={{ 'aria-label': 'controlled' }}
-      sx={{
-        color: 'white',
-        '&.Mui-checked': {
-          color: 'white',
-        },
-      }}
+      sx={{color: 'white' }}
     />
   );
 }
@@ -61,64 +33,52 @@ export default function BasicList(props) {
     //     setModalOpen(true);
     // }
     
-      return (
+    return (
         
-        <Box className="center" sx={{ width: '100%', maxWidth: 360 }}>
-          <nav aria-label="main mailbox folders">
-            <List>
-              <ListItem disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>
-                      <ControlledCheckbox/>
-                  </ListItemIcon>
-                  <ListItemText primary="Breathe" />
-                  <BreatheModal/>
-                </ListItemButton>
-              </ListItem>
-              <ListItem disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>
+      <Box className="center" sx={{ width: '100%', maxWidth: 360 }}>
+        <nav aria-label="main mailbox folders">
+          <List>
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
                     <ControlledCheckbox/>
-                  </ListItemIcon>
-                  <ListItemText primary="Daily Stretch" />
-                  
-                </ListItemButton>
-              </ListItem>
-              <ListItem disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>
-                    <ControlledCheckbox/>
-                  </ListItemIcon>
-                  <ListItemText primary="Journal Entry" />
-                  <JournalModal/>
-                </ListItemButton>
-              </ListItem>
-              
-              <ListItem disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>
-                    <ControlledCheckbox/>
-                  </ListItemIcon>
-                  <ListItemText primary="Drink Water" />
-                  <div><WaterBottle/></div>
-                  <div><WaterBottle/></div>
-                  <div><WaterBottle/></div>
-                  <div><WaterBottle/></div>
-                </ListItemButton>
-              </ListItem>
-            </List>
-            <div id="finalMessage" >
-              <div class="center">
-                <div class="message">
-                <ConfettiExplosion />
-                  <h1>Okay, you've had enough screen time!<br></br><ConfettiExplosion />
-                    Go outside, get some fresh air and come back when you're ready :)</h1>
-                    
-                </div>
-              </div>
-            </div>
-          </nav>
-          
-        </Box>
-      );
+                </ListItemIcon>
+                <ListItemText primary="Breathe" />
+                <BreatheModal/>
+                {/* <Button variant="outlined" size="small" sx={{color: 'white', borderColor:'white' }} >Let's Do It!</Button> */}
+                {/* { modalOpen && <Modal /> }
+                { modalOpen && <Backdrop /> } */}
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <ControlledCheckbox/>
+                </ListItemIcon>
+                <ListItemText primary="Daily Stretch" />
+                <Button variant="outlined" size="small" sx={{color: 'white', borderColor:'white' }}>Let's Do It!</Button>
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <ControlledCheckbox/>
+                </ListItemIcon>
+                <ListItemText primary="Journal Entry" />
+                <Button variant="outlined" size="small" sx={{color: 'white', borderColor:'white' }}>Let's Do It!</Button>
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <ControlledCheckbox/>
+                </ListItemIcon>
+                <ListItemText primary="Drink Water" />
+              </ListItemButton>
+            </ListItem>
+          </List>
+        </nav>
+        
+      </Box>
+    );
   }

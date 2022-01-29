@@ -106,10 +106,9 @@ export default function BasicList(props) {
               </ListItem>
             </List>
             <div id="finalMessage" >
-
               <div class="center">
                 <div class="message">
-                  <h1>Okay you've had enough screen time!<br></br>
+                  <h1>Okay, you've had enough screen time!<br></br>
                     Go outside, get some fresh air and come back when you're ready :)</h1>
                 </div>
               </div>

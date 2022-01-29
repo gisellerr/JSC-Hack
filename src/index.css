@@ -77,7 +77,7 @@ h1{
     background-size:cover;
     border:1px solid #000;
     border-radius:50%;
-    width:70%;
+    width:95%;
     height:1200px;
     animation: movimiento 25s linear 0s infinite;
     box-shadow:0 0 5px RGBA(255,255,255, 0.10),
@@ -140,23 +140,24 @@ h1{
 }
 
 .breathe:before{
-  content: 'Breathe In';
+  content: 'Inhale';
   font-size: 400%;
   animation-name: breathe-animation;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   transform: translate(-50%,-50%);
   left: 50%;
-  top: 25%;
+  top: 10%;
   position: absolute;
+  color: black;
 }
 
 @keyframes breathe-animation {
   0% {font-size:50px; opacity:1;}
   /* 49% {font-size:500%; opacity:0;} */
-  49% {font-size:75px; opacity:1; content: "Breathe In"}
-  50% {font-size:75px; opacity:1; content: "Breathe Out"}
+  49% {font-size:75px; opacity:1; content: "Inhale"}
+  50% {font-size:75px; opacity:1; content: "Exhale"}
   /* 99% {font-size:400%; opacity:0;} */
-  99% {font-size:50px;opacity:1; content: "Breathe Out"}
-  100% {font-size:50px;opacity:1; content: "Breathe In"}
+  99% {font-size:50px;opacity:1; content: "Exhale"}
+  100% {font-size:50px;opacity:1; content: "Inhale"}
 }

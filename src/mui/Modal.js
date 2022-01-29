@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { Backdrop } from '@mui/material';
 import Pulse from './pulse';
+import Breathe from './Breathe';
 
 const style = {
   position: 'absolute',
@@ -34,7 +35,10 @@ export default function BreatheModal() {
         aria-describedby="transition-modal-description"
       >
         <Box sx={style}>
-          <Pulse />
+            <div>
+                <Breathe/>
+                <Pulse/>
+            </div>
         </Box>
       </Modal>
     </div>

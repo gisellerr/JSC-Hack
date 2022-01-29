@@ -107,7 +107,7 @@ export default function BasicList(props) {
                 </ListItemButton>
               </ListItem>
             </List>
-            <div id="finalMessage" >
+            <div id="finalMessage" class="stars">
               <div class="center">
                 <div class="message">
                 <ConfettiExplosion />

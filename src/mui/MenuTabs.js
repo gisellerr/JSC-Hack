@@ -9,6 +9,7 @@ import Pulse from './pulse';
 import Breathe from './Breathe';
 import BasicList from './Checklist';
 import WaterBottle from './WaterBottle'
+import wip from '../img/wip.gif'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -65,8 +66,9 @@ export default function BasicTabs() {
         <BasicList />
         
       </TabPanel>
-      <TabPanel value={value} index={1} class="stars">
-        
+      <TabPanel value={value} index={1} >
+        <h1>Work In Progress</h1>
+        <img src={wip} alt="Work in Progress..." className="center" />
       </TabPanel>
       <TabPanel value={value} index={2} class="stars">
       <Breathe/>

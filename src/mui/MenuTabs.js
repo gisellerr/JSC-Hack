@@ -7,6 +7,7 @@ import Box from '@mui/material/Box';
 import Background from './Background';
 import Pulse from './pulse';
 import Message from './Message';
+import BasicList from './Checklist';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -58,9 +59,10 @@ export default function BasicTabs() {
       </Box>
       <TabPanel value={value} index={0}>
         <Background/>
-        <h1>Today's Tasks</h1>
-        <Pulse/>
-        <Message/>
+        <h1>Today's Objectives</h1>
+        <BasicList />
+        {/* <Pulse/> */}
+        {/* <Message/> */}
         
       </TabPanel>
       <TabPanel value={value} index={1} class="stars">

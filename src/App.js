@@ -2,7 +2,7 @@ import ButtonAppBar from "./mui/menuBar";
 
 function App() {
   return (
-    <div >
+    <div>
       <ButtonAppBar/>
       Hello World
     </div>

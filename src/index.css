@@ -66,9 +66,9 @@ h1{
 .fix{
     position:fixed;
     bottom:0px;
-    top:50%;
+    top:40%;
     left: 20%;
-    right:20%
+    right:20%;
 }
 
   
@@ -85,7 +85,7 @@ h1{
                2px 2px 25px #000 inset,
                25px 25px 45px RGBA(0,0,0, 0.45) inset;
     margin:6em auto;
-    transform:rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+    transform:rotateX(10deg) rotateY(10deg) rotateZ(10deg);
 }
   
 @keyframes movimiento {

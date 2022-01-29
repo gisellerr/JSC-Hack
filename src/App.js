@@ -4,7 +4,7 @@ function App() {
   return (
     <div>
       <ButtonAppBar/>
-      Hello World
+      <h1>Hello World</h1>
     </div>
   );
 }

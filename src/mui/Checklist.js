@@ -7,10 +7,11 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Button from '@mui/material/Button';
-import BreatheModal from './BreatheModal'
-import WaterBottle from './WaterBottle'
-import JournalModal from './JournalModal'
-import ConfettiExplosion from 'react-confetti-explosion'
+import BreatheModal from './BreatheModal';
+import WaterBottle from './WaterBottle';
+import JournalModal from './JournalModal';
+import ConfettiExplosion from 'react-confetti-explosion';
+import StretchModal from './StretchModal'
 var totalChecked=0;
 var allDone=false;
 
@@ -68,7 +69,7 @@ export default function BasicList(props) {
                   <ControlledCheckbox/>
                 </ListItemIcon>
                 <ListItemText primary="Daily Stretch" />
-                <Button variant="outlined" size="small" sx={{color: 'white', borderColor:'white' }}>Let's Do It!</Button>
+                <StretchModal/>
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>

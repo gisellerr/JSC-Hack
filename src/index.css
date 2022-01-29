@@ -267,7 +267,7 @@ ul { list-style-type:none; }
   82% {font-size:50px;opacity:1; content: "3"}
   88% {font-size:50px;opacity:1; content: "2"}
   94% {font-size:50px;opacity:1; content: "1"}
-  100% {font-size:50px; opacity:1; content: "10"}
+  100% {font-size:50px; opacity:1; content: "Well Done!"}
 }
 
 #finalMessage{

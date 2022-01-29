@@ -56,25 +56,18 @@ export default function BasicTabs() {
           <Tab label="Home" {...a11yProps(0)} sx={{color: 'white' }}/>
           <Tab label="History" {...a11yProps(1)} sx={{color: 'white' }}/>
           <Tab label="Message" {...a11yProps(2)} sx={{color: 'white' }}/>
-          <Tab label="Breathe" {...a11yProps(3)} sx={{color: 'white' }}/>
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
         <Background/>
         <h1>Today's Objectives</h1>
-        <div class="center">
-          <div class="message">
-            <h1>Okay you've had enough screen time!<br></br>
-              Go outside, get some fresh air and come back when you're ready :)</h1>
-          </div>
-        </div>
         <BasicList />
         
       </TabPanel>
-      <TabPanel value={value} index={1} class="stars">
+      <TabPanel value={value} index={1}>
         
       </TabPanel>
-      <TabPanel value={value} index={2} class="stars">
+      <TabPanel value={value} index={2}>
       <div class="center">
           <div class="message">
             <h1>Okay you've had enough screen time!<br></br>

@@ -9,6 +9,7 @@ import Pulse from './pulse';
 import Breathe from './Breathe';
 import BasicList from './Checklist';
 import Countdown from './Countdown';
+import WaterBottle from './WaterBottle'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -44,6 +45,7 @@ function a11yProps(index) {
 }
 
 export default function BasicTabs() {
+
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {

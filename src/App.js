@@ -1,13 +1,17 @@
 import ButtonAppBar from "./mui/menuBar";
 import Notepad from "./mui/Notepad";
+import Background from "./mui/Background";
 
 function App() {
   return (
-    <div >
+    <div className="allBody">
+      <Background/>
       <ButtonAppBar/>
       
       <h1>Hello World</h1>
-      <Notepad/>
+      {/*<Notepad/>*/}
+      
+      
     </div>
   );
 }

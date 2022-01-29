@@ -9,7 +9,8 @@ import ListItemText from '@mui/material/ListItemText';
 import Button from '@mui/material/Button';
 // import Modal from './Modal'
 // import Backdrop from './Backdrop'
-import BreatheModal from './Modal'
+import BreatheModal from './Modal';
+import WaterBottle from './WaterBottle';
 
 function ControlledCheckbox() {
   const [checked, setChecked] = React.useState(true);

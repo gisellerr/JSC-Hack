@@ -64,7 +64,8 @@ export default function BasicTabs() {
       </Box>
       <TabPanel value={value} index={0}>
         <Background/>
-        <h1>Today's Objectives</h1>
+        <h1>Healthy Habits for Healthy Humans</h1>
+        <h2>Today's Objectives</h2>
         <BasicList />
         
       </TabPanel>

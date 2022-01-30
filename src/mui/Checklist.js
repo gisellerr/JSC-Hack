@@ -98,8 +98,8 @@ export default function BasicList(props) {
             <div id="finalMessage" class="stars">
               <div class="center">
                 <div class="message">
-                <ConfettiExplosion />
-                  <h1>Okay, you've had enough screen time!<br></br><ConfettiExplosion />
+                <ConfettiExplosion/>
+                  <h1>Okay, you've had enough screen time!<br></br><ConfettiExplosion/>
                     Go outside, get some fresh air and come back when you're ready :)</h1>
                 </div>
               </div>

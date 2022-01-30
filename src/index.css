@@ -241,11 +241,11 @@ ul { list-style-type:none; }
 }
 
 .countdown:before{
-  content: '10';
+  content: 'Well Done!';
   font-size: 50px;
   animation-name: countdown-animation;
-  animation-duration: 15s;
-  animation-iteration-count: 3;
+  animation-duration: 25s;
+  animation-iteration-count: 1;
   transform: translate(-50%,-50%);
   left: 50%;
   top: 80%;
@@ -257,23 +257,27 @@ ul { list-style-type:none; }
 
 
 @keyframes countdown-animation {
-  30% {font-size:50px; opacity:1; content: "10"}
-  36% {font-size:50px; opacity:1; content: "9"}
-  42% {font-size:50px;opacity:1; content: "8"}
-  48% {font-size:50px;opacity:1; content: "7"}
-  54% {font-size:50px;opacity:1; content: "6"}
-  60% {font-size:50px; opacity:1; content: "5"}
-  76% {font-size:50px; opacity:1; content: "4"}
-  82% {font-size:50px;opacity:1; content: "3"}
-  88% {font-size:50px;opacity:1; content: "2"}
-  94% {font-size:50px;opacity:1; content: "1"}
+  0% {font-size:50px; opacity:1; content: "Let's Stretch!"}
+  30% {font-size:50px; opacity:1; content: "Let's Stretch!"}
+  38% {font-size:50px; opacity:1; content: "Are You Ready?"}
+  56% {font-size:50px; opacity:1; content: "Let's Begin"}
+  60% {font-size:50px; opacity:1; content: "10"}
+  64% {font-size:50px; opacity:1; content: "9"}
+  68% {font-size:50px;opacity:1; content: "8"}
+  72% {font-size:50px;opacity:1; content: "7"}
+  76% {font-size:50px;opacity:1; content: "6"}
+  80% {font-size:50px; opacity:1; content: "5"}
+  84% {font-size:50px; opacity:1; content: "4"}
+  88% {font-size:50px;opacity:1; content: "3"}
+  92% {font-size:50px;opacity:1; content: "2"}
+  96% {font-size:50px;opacity:1; content: "1"}
+  99% {font-size:50px;opacity:1; content: "1"}
   100% {font-size:50px; opacity:1; content: "Well Done!"}
 }
 
 #finalMessage{
     display: none;
     z-index: 10;
-    background-color: black;
     position: absolute;
     width: 150%;
     height: 150%;
